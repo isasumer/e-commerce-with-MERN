@@ -7,9 +7,8 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-  "dev":"concurrently \"npm run server\" \"npm run client\""
-},
-
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/isasumer/e-commerce-with-MERN.git"
@@ -21,6 +20,7 @@
   },
   "homepage": "https://github.com/isasumer/e-commerce-with-MERN#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
