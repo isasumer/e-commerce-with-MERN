@@ -23,3 +23,7 @@ app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} on port ${PORT}`)
 );
+
+// I created MongoDB account and install MongoDB compass.
+//After configuration (security and data deployment) Then i connected it to MongoDB Compass.
+// Finally ı added MongoDB_URI into my .env file.
