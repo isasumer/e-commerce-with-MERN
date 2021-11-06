@@ -1,10 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
+import connectDB from "./config/db.js";
 import products from "./data/products.js";
 
-const app = express();
+dotenv.config(); // for 12 security
 
-dotenv.config();
+connectDB();
+
+const app = express();
 
 app.get("/", (req, res) => {
   res.send("API is running.....");
@@ -25,5 +28,5 @@ app.listen(
 );
 
 // I created MongoDB account and install MongoDB compass.
-//After configuration (security and data deployment) Then i connected it to MongoDB Compass.
+// After configuration (security and data deployment) Then i connected it to MongoDB Compass.
 // Finally ı added MongoDB_URI into my .env file.
