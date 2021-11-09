@@ -5,12 +5,12 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node backend/server",
+    "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node --experimental-modules backend/seeder",
-    "data:destroy": "node --experimental-modules backend/seeder -d"
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -23,15 +23,20 @@
   },
   "homepage": "https://github.com/isasumer/e-commerce-with-MERN#readme",
   "dependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "@babel/core": "^7.16.0",
+    "babel": "^6.23.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
-    "dotenv": "^10.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.12"
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
   },
   "devDependencies": {
-    "concurrently": "^6.3.0",
-    "nodemon": "^2.0.14"
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
   }
 }
